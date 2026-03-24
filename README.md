@@ -72,10 +72,14 @@ make PLUGIN_DIR=plugins/myplugin
 ## Running tests
 
 ```bash
-make test
+# Full cycle: build tool + install (needs sudo) + build and run tests
+sudo make test
+
+# Re-run tests only (after the tool is already installed)
+make test-run
 ```
 
-Builds the test programs in `tests/` and runs each one under `valgrind --tool=bridge`.
+`make test-run` skips the install step so you can iterate quickly without sudo after the initial `make install`.
 
 ---
 

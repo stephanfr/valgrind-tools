@@ -130,10 +130,14 @@ $(BUILDDIR)/tests/%: tests/%.cpp
 
 test-build: $(TEST_BINS)
 
-test: all test-build install
+# test-run: run already-installed tool against pre-built test binaries (no sudo needed)
+test-run: test-build
 	@echo "=== Running tests under Valgrind Bridge ==="
 	@for t in $(TEST_BINS); do \
 	    echo "--- $$t ---"; \
 	    valgrind --tool=$(TOOL_NAME) $$t 2>&1 | tail -30; \
 	    echo; \
 	done
+
+# test: full cycle — build tool, install (needs sudo), build tests, run
+test: all test-build install test-run
