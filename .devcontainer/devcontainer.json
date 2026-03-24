@@ -13,11 +13,18 @@
     "vscode": {
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",
-        "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools"
+        "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+        "C_Cpp.default.cStandard": "c11",
+        "C_Cpp.default.cppStandard": "c++17",
+        "editor.formatOnSave": true,
+        "C_Cpp.clang_format_fallbackStyle": "LLVM"
       },
       "extensions": [
         "ms-vscode.cpptools",
-        "ms-vscode.makefile-tools"
+        "ms-vscode.makefile-tools",
+        "xaver.clang-format",
+        "eamodio.gitlens",
+        "ms-vscode.hexeditor"
       ]
     }
   },
