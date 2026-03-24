@@ -1,0 +1,34 @@
+# C/C++ compilation outputs
+*.o
+*.obj
+*.a
+*.so
+*.d
+
+# Build directories
+/build/
+
+# Coverage/profiling artifacts
+*.gcda
+*.gcno
+*.gcov
+# Runtime/test outputs
+*.log
+*.tmp
+*.pid
+*.stackdump
+core
+core.*
+
+# Editor/OS noise
+*~
+*.swp
+*.swo
+.DS_Store
+
+# Project-specific generated outputs
+/bridge.out.json
+/local-libexec/
+
+# Planning / design artifacts
+plan-*.prompt.md
